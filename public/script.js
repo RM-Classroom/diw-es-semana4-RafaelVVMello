@@ -1,23 +1,26 @@
-let index = 0;
-const slides = document.querySelectorAll(".slide");
+document.addEventListener("DOMContentLoaded", () => {
 
-function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[i].classList.add("active");
-}
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
 
-document.querySelector(".next").addEventListener("click", () => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
+    function showSlide(i) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[i].classList.add("active");
+    }
+
+    document.querySelector(".next").addEventListener("click", () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    });
+
+    setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    }, 3000);
+
 });
-
-document.querySelector(".prev").addEventListener("click", () => {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
-});
-
-/* troca automática */
-setInterval(() => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-}, 3000);
