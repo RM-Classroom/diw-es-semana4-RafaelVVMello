@@ -11,8 +11,9 @@ Nessa atividade, você deverá montar a página inicial do projeto escolhido, a 
 
 - Nome:
 - Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Proposta de projeto escolhida: Coleções e Itens - Galeria de Jogos  
+- Breve descrição sobre seu projeto: Este projeto consiste em uma página web que apresenta uma galeria de jogos, com imagens, descrições e um formulário de inscrição.
+
 
 
 ## Print do(s) wireframe(s) criado
